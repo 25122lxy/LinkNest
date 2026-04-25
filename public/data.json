@@ -1,11 +1,6 @@
 [
   {
-    "title": "OpenAI",
-    "url": "https://openai.com",
-    "tags": ["AI", "工具"]
-  },
-  {
-    "title": "Vercel",
+    "title": "Vercel部署",
     "url": "https://vercel.com",
     "tags": ["部署", "前端"]
   },
@@ -15,38 +10,133 @@
     "tags": ["代码", "工具"]
   },
   {
-    "title": "Vue.js",
-    "url": "https://vuejs.org",
-    "tags": ["前端", "框架"]
+    "title": "AndroidSDK",
+    "url": "https://developer.android.com/studio?hl=zh-cn#command-tools",
+    "tags": ["开发", "工具"]
   },
   {
-    "title": "MDN Web Docs",
-    "url": "https://developer.mozilla.org",
-    "tags": ["文档", "前端"]
+    "title": "Kimi API开放平台",
+    "url": "https://platform.moonshot.cn/console/account",
+    "tags": ["API", "AI"]
   },
   {
-    "title": "Stack Overflow",
-    "url": "https://stackoverflow.com",
-    "tags": ["代码", "问答"]
+    "title": "阿里魔塔",
+    "url": "https://modelscope.cn/my/overview",
+    "tags": ["AI", "模型"]
   },
   {
-    "title": "CodePen",
-    "url": "https://codepen.io",
-    "tags": ["前端", "工具"]
+    "title": "英伟达",
+    "url": "https://build.nvidia.com/",
+    "tags": ["AI", "算力"]
   },
   {
-    "title": "Figma",
-    "url": "https://figma.com",
-    "tags": ["设计", "工具"]
+    "title": "API管理工具",
+    "url": "https://github.com/farion1231/cc-switch",
+    "tags": ["工具", "API", "GitHub"]
   },
   {
-    "title": "Can I Use",
-    "url": "https://caniuse.com",
-    "tags": ["前端", "文档"]
+    "title": "阿里百炼云",
+    "url": "https://bailian.console.aliyun.com/cn-beijing/?spm=5176.29619931.J_SEsSjsNv72yRuRFS2VknO.2.7cf810d7R19BI7&tab=model#/api-key",
+    "tags": ["AI", "阿里云"]
   },
   {
-    "title": "npm",
-    "url": "https://npmjs.com",
-    "tags": ["前端", "工具"]
+    "title": "AI图表工具",
+    "url": "https://next-ai-drawio.jiang.jp/zh",
+    "tags": ["AI", "图表"]
+  },
+  {
+    "title": "百度去水印",
+    "url": "https://image.baidu.com/",
+    "tags": ["图片", "工具"]
+  },
+  {
+    "title": "图片转换格式",
+    "url": "https://convertio.co/zh/",
+    "tags": ["图片", "转换"]
+  },
+  {
+    "title": "百度统计",
+    "url": "https://tongji.baidu.com/main/setting/10000717873/home/site/getjs?siteId=23056663",
+    "tags": ["统计", "网站"]
+  },
+  {
+    "title": "图片转favicon图标",
+    "url": "https://favicon.io/favicon-converter/",
+    "tags": ["图标", "转换"]
+  },
+  {
+    "title": "屏幕扩展",
+    "url": "https://github.com/pavlobu/deskreen/releases",
+    "tags": ["工具", "电脑", "GitHub"]
+  },
+  {
+    "title": "cloudflare部署",
+    "url": "https://pages.cloudflare.com",
+    "tags": ["部署", "前端"]
+  },
+  {
+    "title": "科学上网",
+    "url": "https://github.com/clash-verge-rev/clash-verge-rev/releases",
+    "tags": ["工具", "网络", "GitHub"]
+  },
+  {
+    "title": "机场",
+    "url": "https://xn--4gqx1hgtfdmt.com/#/dashboard",
+    "tags": ["网络", "服务"]
+  },
+  {
+    "title": "Window激活",
+    "url": "https://github.com/zbezj/HEU_KMS_Activator",
+    "tags": ["系统", "激活", "GitHub"]
+  },
+  {
+    "title": "小程序逆向",
+    "url": "https://github.com/biggerstar/wedecode",
+    "tags": ["逆向", "小程序", "GitHub"]
+  },
+  {
+    "title": "小程序调试",
+    "url": "https://github.com/evi0s/WMPFDebugger",
+    "tags": ["调试", "小程序", "GitHub"]
+  },
+  {
+    "title": "opencode",
+    "url": "https://github.com/anomalyco/opencode",
+    "tags": ["代码", "开发", "GitHub"]
+  },
+  {
+    "title": "画图",
+    "url": "https://github.com/jgraph/drawio-desktop",
+    "tags": ["绘图", "工具", "GitHub"]
+  },
+  {
+    "title": "飞书云文档",
+    "url": "https://d0oi3cuxcox.feishu.cn/drive/home/",
+    "tags": ["办公", "文档"]
+  },
+  {
+    "title": "gk-travel",
+    "url": "https://gk-travel.pages.dev/",
+    "tags": ["网站", "旅行"]
+  },
+  {
+    "title": "JetBrains",
+    "url": "https://www.jetbrains.com/",
+    "tags": ["开发", "软件"]
+  },
+  {
+    "title": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "tags": ["AI", "工具"]
+  },
+  {
+    "title": "豆包",
+    "url": "https://www.doubao.com",
+    "tags": ["AI", "工具"]
+  },
+  {
+    "title": "小米AIstudio",
+    "url": "https://aistudio.xiaomimimo.com/#/chat/",
+    "tags": ["AI", "工具"]
   }
 ]

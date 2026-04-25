@@ -1,0 +1,52 @@
+[
+  {
+    "title": "OpenAI",
+    "url": "https://openai.com",
+    "tags": ["AI", "工具"]
+  },
+  {
+    "title": "Vercel",
+    "url": "https://vercel.com",
+    "tags": ["部署", "前端"]
+  },
+  {
+    "title": "GitHub",
+    "url": "https://github.com",
+    "tags": ["代码", "工具"]
+  },
+  {
+    "title": "Vue.js",
+    "url": "https://vuejs.org",
+    "tags": ["前端", "框架"]
+  },
+  {
+    "title": "MDN Web Docs",
+    "url": "https://developer.mozilla.org",
+    "tags": ["文档", "前端"]
+  },
+  {
+    "title": "Stack Overflow",
+    "url": "https://stackoverflow.com",
+    "tags": ["代码", "问答"]
+  },
+  {
+    "title": "CodePen",
+    "url": "https://codepen.io",
+    "tags": ["前端", "工具"]
+  },
+  {
+    "title": "Figma",
+    "url": "https://figma.com",
+    "tags": ["设计", "工具"]
+  },
+  {
+    "title": "Can I Use",
+    "url": "https://caniuse.com",
+    "tags": ["前端", "文档"]
+  },
+  {
+    "title": "npm",
+    "url": "https://npmjs.com",
+    "tags": ["前端", "工具"]
+  }
+]

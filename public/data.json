@@ -15,9 +15,19 @@
     "tags": ["开发", "工具"]
   },
   {
-    "title": "Kimi API开放平台",
+    "title": "Kimi API开放平台 (old)",
     "url": "https://platform.moonshot.cn/console/account",
     "tags": ["API", "AI"]
+  },
+  {
+    "title": "Kimi开放平台",
+    "url": "https://platform.kimi.com/console/account",
+    "tags": ["AI", "API", "开发"]
+  },
+  {
+    "title": "Kimi",
+    "url": "https://www.kimi.com/",
+    "tags": ["AI", "对话", "工具"]
   },
   {
     "title": "阿里魔塔",
@@ -148,5 +158,15 @@
     "title": "小米AIstudio",
     "url": "https://aistudio.xiaomimimo.com/#/chat/",
     "tags": ["AI", "工具"]
+  },
+  {
+    "title": "DeepSeek开放平台",
+    "url": "https://platform.deepseek.com/usage",
+    "tags": ["AI", "API", "开发"]
+  },
+  {
+    "title": "DeepSeek Chat",
+    "url": "https://chat.deepseek.com/",
+    "tags": ["AI", "对话", "工具"]
   }
 ]

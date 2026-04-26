@@ -115,6 +115,11 @@
     "tags": ["办公", "文档"]
   },
   {
+    "title": "雨云",
+    "url": "https://www.rainyun.com/home",
+    "tags": ["云服务器", "开发", "工具"]
+  },
+  {
     "title": "gk-travel",
     "url": "https://gk-travel.pages.dev/",
     "tags": ["网站", "旅行"]
@@ -123,6 +128,11 @@
     "title": "JetBrains",
     "url": "https://www.jetbrains.com/",
     "tags": ["开发", "软件"]
+  },
+  {
+    "title": "phpStudy",
+    "url": "https://m.xp.cn/phpstudy",
+    "tags": ["开发", "环境", "工具"]
   },
   {
     "title": "ChatGPT",

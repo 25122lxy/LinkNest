@@ -1,5 +1,7 @@
 <template>
   <div class="bookmark-list">
+    <!-- 复制成功提示 -->
+    <div v-if="showCopyTip" class="copy-toast">链接已复制</div>
     <!-- 空状态 -->
     <div v-if="bookmarks.length === 0" class="empty-state">
       <div class="empty-icon">
@@ -36,6 +38,12 @@
         <div class="bookmark-content">
           <div class="item-header">
             <h3 class="bookmark-title">{{ bookmark.title }}</h3>
+            <button class="copy-btn" @click.stop.prevent="copyUrl(bookmark.url)" title="复制链接">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+            </button>
             <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -70,6 +78,11 @@ export default {
     }
   },
   emits: ['tag-click'],
+  data() {
+    return {
+      showCopyTip: false
+    }
+  },
   methods: {
     // 获取网站favicon - 优先用网站自己的favicon.ico
     getFavicon(url) {
@@ -92,6 +105,15 @@ export default {
     // 图片加载失败时使用默认图标
     handleImageError(e) {
       e.target.style.display = 'none'
+    },
+    // 复制链接
+    copyUrl(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        this.showCopyTip = true
+        setTimeout(() => {
+          this.showCopyTip = false
+        }, 2000)
+      })
     }
   }
 }
@@ -225,6 +247,40 @@ export default {
   letter-spacing: -0.01em;
 }
 
+.copy-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.copy-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #94a3b8;
+}
+
+.copy-btn:hover {
+  background: #f1f5f9;
+}
+
+.copy-btn:hover svg {
+  color: #6366f1;
+}
+
+.bookmark-item:hover .copy-btn {
+  opacity: 1;
+}
+
 .arrow-icon {
   flex-shrink: 0;
   width: 18px;
@@ -278,5 +334,72 @@ export default {
 .tag:hover {
   background: #e0e7ff;
   color: #6366f1;
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .bookmark-item {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .item-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .favicon-img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .bookmark-title {
+    font-size: 15px;
+  }
+
+  .copy-btn {
+    opacity: 1;
+  }
+
+  .arrow-icon {
+    display: none;
+  }
+
+  .bookmark-url {
+    font-size: 12px;
+  }
+
+  .tag {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+}
+
+/* 复制成功提示 */
+.copy-toast {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 </style>

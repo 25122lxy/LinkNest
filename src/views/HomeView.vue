@@ -20,6 +20,7 @@
       <!-- 搜索框 -->
       <div class="search-section">
         <SearchBar 
+          ref="searchBarRef"
           v-model="searchQuery" 
           @search="setSearchQuery"
         />
@@ -48,12 +49,26 @@
         </div>
         <div class="tag-list">
           <button
-            v-for="tag in allTags"
+            v-for="tag in (tagsExpanded ? allTags : allTags.slice(0, 7))"
             :key="tag"
             :class="['tag-button', { active: selectedTags.includes(tag) }]"
             @click="toggleTag(tag)"
           >
             {{ tag }}
+          </button>
+          <button
+            v-if="allTags.length > 10 && !tagsExpanded"
+            class="expand-btn"
+            @click="tagsExpanded = true"
+          >
+            +{{ allTags.length - 7 }} 更多
+          </button>
+          <button
+            v-if="tagsExpanded && allTags.length > 10"
+            class="expand-btn"
+            @click="tagsExpanded = false"
+          >
+            收起
           </button>
         </div>
       </div>
@@ -89,7 +104,7 @@
         <div class="footer-content">
           <span class="count">{{ filteredBookmarks.length }} 个书签</span>
           <span class="divider">·</span>
-          <span class="tips">按 Enter 搜索</span>
+          <span class="tips">按 / 聚焦搜索</span>
         </div>
       </footer>
     </div>
@@ -97,7 +112,7 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import SearchBar from '../components/SearchBar.vue'
 import BookmarkList from '../components/BookmarkList.vue'
 import { useBookmarks } from '../composables/useBookmarks.js'
@@ -122,12 +137,30 @@ export default {
       clearFilters
     } = useBookmarks()
 
+    const searchBarRef = ref(null)
+    const tagsExpanded = ref(false)
+
+    const handleKeydown = (e) => {
+      if (e.key === '/') {
+        const activeTag = document.activeElement?.tagName
+        if (activeTag !== 'INPUT' && activeTag !== 'TEXTAREA') {
+          e.preventDefault()
+          document.querySelector('.search-input')?.focus()
+        }
+      }
+    }
+
     const handleTagClick = (tag) => {
       toggleTag(tag)
     }
 
     onMounted(() => {
       loadBookmarks()
+      document.addEventListener('keydown', handleKeydown)
+    })
+
+    onUnmounted(() => {
+      document.removeEventListener('keydown', handleKeydown)
     })
 
     return {
@@ -141,7 +174,9 @@ export default {
       handleTagClick,
       setSearchQuery,
       toggleTag,
-      clearFilters
+      clearFilters,
+      searchBarRef,
+      tagsExpanded
     }
   }
 }
@@ -300,6 +335,23 @@ export default {
   border-color: #1e293b;
 }
 
+.expand-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6366f1;
+  background: #f5f3ff;
+  border: 1px solid #ede9fe;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expand-btn:hover {
+  background: #ede9fe;
+  border-color: #c7d2fe;
+}
+
 /* 加载 */
 .loading {
   display: flex;
@@ -401,5 +453,54 @@ export default {
 
 .tips {
   opacity: 0.7;
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .home-view {
+    padding: 32px 16px 48px;
+  }
+
+  .brand {
+    gap: 12px;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .logo svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .tag-filter {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .tag-button {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .expand-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .footer {
+    margin-top: 32px;
+  }
 }
 </style>

@@ -8,7 +8,8 @@
     <input
       type="text"
       :value="modelValue"
-      placeholder="搜索书签..."
+      placeholder="搜索书签... (/ 聚焦)"
+      ref="searchInput"
       @input="handleInput"
       @keydown.enter="handleEnter"
       @keydown.escape="handleClear"
@@ -38,24 +39,27 @@ export default {
     }
   },
   emits: ['update:modelValue', 'search'],
-  setup(props, { emit }) {
-    const handleInput = (e) => {
-      emit('update:modelValue', e.target.value)
-    }
-
-    const handleEnter = () => {
-      emit('search', props.modelValue)
-    }
-
-    const handleClear = () => {
-      emit('update:modelValue', '')
-      emit('search', '')
-    }
-
+  data() {
     return {
-      handleInput,
-      handleEnter,
-      handleClear
+      searchInputRef: null
+    }
+  },
+  mounted() {
+    this.searchInputRef = this.$refs.searchInput
+  },
+  methods: {
+    focus() {
+      this.$refs.searchInput?.focus()
+    },
+    handleInput(e) {
+      this.$emit('update:modelValue', e.target.value)
+    },
+    handleEnter() {
+      this.$emit('search', this.modelValue)
+    },
+    handleClear() {
+      this.$emit('update:modelValue', '')
+      this.$emit('search', '')
     }
   }
 }
@@ -136,5 +140,26 @@ export default {
 .clear-btn svg {
   width: 14px;
   height: 14px;
+}
+
+@media (max-width: 640px) {
+  .search-input {
+    padding: 14px 48px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .search-icon {
+    left: 16px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .clear-btn {
+    right: 12px;
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+  }
 }
 </style>

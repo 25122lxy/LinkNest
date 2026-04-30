@@ -10,6 +10,66 @@
     "tags": ["代码", "工具"]
   },
   {
+    "title": "LocalTunnel",
+    "url": "https://localtunnel.app/",
+    "tags": ["内网穿透", "开发", "工具"]
+  },
+  {
+    "title": "Serveo",
+    "url": "https://serveo.net/",
+    "tags": ["内网穿透", "开发", "工具"]
+  },
+  {
+    "title": "Pake",
+    "url": "https://github.com/tw93/Pake",
+    "tags": ["网页打包", "桌面应用", "GitHub", "工具"]
+  },
+  {
+    "title": "QuantDinger",
+    "url": "https://github.com/brokermr810/QuantDinger/",
+    "tags": ["量化交易", "AI", "GitHub", "开发"]
+  },
+  {
+    "title": "腾讯云免费试用",
+    "url": "https://cloud.tencent.com/act/pro/free",
+    "tags": ["云服务器", "免费", "云计算"]
+  },
+  {
+    "title": "帽子云",
+    "url": "https://www.maoziyun.com/",
+    "tags": ["静态网站", "部署", "CDN"]
+  },
+  {
+    "title": "Remove.bg",
+    "url": "https://www.remove.bg/zh/upload",
+    "tags": ["图片去背景", "AI", "工具"]
+  },
+  {
+    "title": "云启科技API",
+    "url": "https://api.yunqikeji.vip/",
+    "tags": ["API接口", "开发", "工具"]
+  },
+  {
+    "title": "QQ邮箱",
+    "url": "https://wx.mail.qq.com/",
+    "tags": ["邮箱", "办公"]
+  },
+  {
+    "title": "MySQL下载",
+    "url": "https://dev.mysql.com/downloads/mysql/",
+    "tags": ["数据库", "开发", "环境"]
+  },
+  {
+    "title": "Node.js下载",
+    "url": "https://nodejs.org/download/release/",
+    "tags": ["开发", "环境"]
+  },
+  {
+    "title": "JDK下载",
+    "url": "https://www.oracle.com/cn/java/technologies/downloads/",
+    "tags": ["Java", "开发", "环境"]
+  },
+  {
     "title": "AndroidSDK",
     "url": "https://developer.android.com/studio?hl=zh-cn#command-tools",
     "tags": ["开发", "工具"]

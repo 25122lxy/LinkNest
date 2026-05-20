@@ -228,5 +228,100 @@
     "title": "DeepSeek Chat",
     "url": "https://chat.deepseek.com/",
     "tags": ["AI", "对话", "工具"]
+  },
+  {
+    "title": "即梦AI",
+    "url": "https://jimeng.jianying.com/ai-tool/home",
+    "tags": ["AI", "绘画", "创作"]
+  },
+  {
+    "title": "百度图片",
+    "url": "https://image.baidu.com/",
+    "tags": ["图片", "搜索"]
+  },
+  {
+    "title": "百度一言",
+    "url": "https://yiyan.baidu.com/",
+    "tags": ["AI", "对话"]
+  },
+  {
+    "title": "百度文心一言",
+    "url": "https://chat.baidu.com/",
+    "tags": ["AI", "对话"]
+  },
+  {
+    "title": "小米AIstudio",
+    "url": "https://aistudio.xiaomimimo.com/#/",
+    "tags": ["AI", "工具"]
+  },
+  {
+    "title": "ChatToken",
+    "url": "https://www.chattoken.cc/#/chat",
+    "tags": ["AI", "对话"]
+  },
+  {
+    "title": "ChatWeb",
+    "url": "https://chatweb.plus/#/chat",
+    "tags": ["AI", "对话"]
+  },
+  {
+    "title": "合宙TCP/UDP测试工具",
+    "url": "https://docs.openluat.com/common/TCPUDP_Test/",
+    "tags": ["网络", "调试", "工具"]
+  },
+  {
+    "title": "阿里云盘",
+    "url": "https://www.alipan.com/",
+    "tags": ["网盘", "存储", "办公"]
+  },
+  {
+    "title": "Qwerty Learner",
+    "url": "https://realkai42.github.io/qwerty-learner/",
+    "tags": ["英语", "打字", "学习", "GitHub"]
+  },
+  {
+    "title": "百度翻译",
+    "url": "https://fanyi.baidu.com/",
+    "tags": ["翻译", "工具"]
+  },
+  {
+    "title": "百度地图",
+    "url": "https://map.baidu.com/",
+    "tags": ["地图", "出行"]
+  },
+  {
+    "title": "必应搜索",
+    "url": "https://cn.bing.com/",
+    "tags": ["搜索", "工具"]
+  },
+  {
+    "title": "百度",
+    "url": "https://www.baidu.com/",
+    "tags": ["搜索", "工具"]
+  },
+  {
+    "title": "小红书",
+    "url": "https://www.xiaohongshu.com/explore",
+    "tags": ["生活", "分享"]
+  },
+  {
+    "title": "抖音",
+    "url": "https://www.douyin.com/",
+    "tags": ["视频", "娱乐"]
+  },
+  {
+    "title": "快手",
+    "url": "https://www.kuaishou.com/",
+    "tags": ["视频", "娱乐"]
+  },
+  {
+    "title": "快手直播",
+    "url": "https://live.kuaishou.com/",
+    "tags": ["直播", "视频"]
+  },
+  {
+    "title": "B站",
+    "url": "https://www.bilibili.com/",
+    "tags": ["视频", "学习", "娱乐", "哔哩哔哩"]
   }
 ]

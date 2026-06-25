@@ -195,6 +195,11 @@
     "tags": ["网站", "旅行"]
   },
   {
+    "title": "photo-stitch",
+    "url": "https://photo-stitch.pages.dev/",
+    "tags": ["网站", "图片拼接"]
+  },
+  {
     "title": "JetBrains",
     "url": "https://www.jetbrains.com/",
     "tags": ["开发", "软件"]
